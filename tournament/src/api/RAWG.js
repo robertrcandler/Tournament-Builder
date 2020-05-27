@@ -16,9 +16,22 @@ function runapi(i) {
         }
         })
         .then((response)=>{
-        console.log(response)
+        // console.log(response.data.results);
+        totaldata.push(response.data.results);
+        console.log(totaldata);
+        //make new file with info
+        fs.writeFile("GameDatabase.json", JSON.stringify(totaldata), function(
+            err
+          ) {
+            if (err) {
+              return console.log(err);
+            }
+            console.log("New File Created!");
+          });
         })
         .catch((error)=>{
         console.log(error)
         })
 }
+
+runapi(1);
