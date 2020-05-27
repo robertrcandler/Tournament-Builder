@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Server port="${fusionauth.management.port}" shutdown="SHUTDOWN">
+  <Listener className="org.apache.catalina.core.AprLifecycleListener" SSLEngine="on"/>
+  <Service name="Catalina">
+    <Connector port="${fusionauth.http.port}" protocol="HTTP/1.1" connectionTimeout="20000" redirectPort="${fusionauth.https.port}" URIEncoding="UTF-8"/>
+    <Connector port="${fusionauth.https.port}" protocol="HTTP/1.1" connectionTimeout="20000" scheme="https" secure="true" SSLEnabled="true" keystoreFile="${fusionauth.config.directory}/keystore" keystorePass="changeit" clientAuth="false" sslProtocol="TLS" URIEncoding="UTF-8"/>
+    <Connector port="${fusionauth.ajp.port}" protocol="AJP/1.3" secretRequired="false"/>
+    <Engine name="Catalina" defaultHost="localhost">
+      <Host name="localhost" autoDeploy="false" unpackWARs="false">
+        <Context path="" docBase="${catalina.base}/../web">
+          <CookieProcessor sameSiteCookies="${fusionauth.cookie.same.site.policy}" />
+          <Manager pathname=""/>
+          <Resources allowLinking="true" />
+        </Context>
+      </Host>
+    </Engine>
+  </Service>
+</Server>
