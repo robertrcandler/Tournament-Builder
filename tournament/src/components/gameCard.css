@@ -1,0 +1,21 @@
+.bodywrapper {
+    text-align: center;
+}
+.rating_wrapper {
+    display: flex;
+    justify-content: space-between;
+}
+.card_wrapper {
+    display:flex;
+    justify-content: space-between;
+}
+/* .rating_center {
+    text-align: center;
+}
+.rating_right {
+    text-align: right;
+}
+.ratingSize {
+    font-size: x-large;
+
+} */
