@@ -1,17 +1,77 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import App from './App';
-import * as serviceWorker from './serviceWorker';
 
-ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
-  document.getElementById('root')
-);
+const config = require('../../config');
 
-// If you want your app to work offline and load faster, you can change
-// unregister() to register() below. Note this comes with some pitfalls.
-// Learn more about service workers: https://bit.ly/CRA-PWA
-serviceWorker.unregister();
+class App extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+    };
+  }
+
+  render() {
+    return (
+      <div id='App'>
+        <header>
+          <h1>FusionAuth Example: React</h1>
+        </header>
+      </div>
+    );
+  }
+}
+
+ReactDOM.render(<App/>, document.querySelector('#Container'));
+
+// ...
+
+import Greeting from './components/Greeting.js';
+
+class App extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      email: 'dinesh@fusionauth.io'
+    };
+  }
+
+  render() {
+    return (
+      <div id='App'>
+        <header>
+          <h1>FusionAuth Example: React</h1>
+          <Greeting email={this.state.email}/>
+        </header>
+      </div>
+    );
+  }
+}
+
+// ...
+
+this.state = {
+  // email: 'dinesh@fusionauth.io'
+};
+
+// ...
+
+constructor(props) {
+  super(props);
+  this.state = {
+    body: {} // this is the body from /user
+  };
+}
+
+render() {
+  return (
+    <div id='App'>
+      <header>
+        <h1>FusionAuth Example: React</h1>
+        <Greeting body={this.state.body}/>
+      </header>
+    </div>
+  );
+}
+
+// ...
