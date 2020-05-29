@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
-import { Home } from './Home';
+import  Home  from './Home';
 import { Games } from './Games';
 import { Contact } from './Contact';
 import { NoMatch } from './NoMatch';
