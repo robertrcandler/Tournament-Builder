@@ -9,6 +9,10 @@
     display:flex;
     justify-content: space-between;
 }
+.cardflex {
+    display: flex;
+    justify-content: space-between;
+}
 /* .rating_center {
     text-align: center;
 }
