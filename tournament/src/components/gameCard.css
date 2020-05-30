@@ -12,6 +12,7 @@
 .cardflex {
     display: flex;
     justify-content: space-between;
+    margin-right: 10px;
 }
 /* .rating_center {
     text-align: center;
