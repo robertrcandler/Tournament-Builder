@@ -4,11 +4,11 @@ import "./gameCard.css";
 
 function Gamecard(props) {
   return (
-    <CardGroup className="cardflex" style={{ width: "20rem" }}>
+    <CardGroup className="cardflex" style={{width: "20rem"}}>
       <Card>
-        <Card.Img variant="top" src="https://via.placeholder.com/150" />
+        <Card.Img variant="top" src={props.backgroundImg} />
         <Card.Body className="bodywrapper">
-          <Card.Title>{props.title}</Card.Title>
+          <Card.Title>{props.name}</Card.Title>
           <div>
             <Card.Subtitle className="mb-2 text-muted">rating</Card.Subtitle>
             <Card.Text className="ratingSize">
@@ -30,17 +30,10 @@ function Gamecard(props) {
               {props.ratings2count} / {props.ratingsCount}
             </Card.Text>
             </div>
-            <div>
-            <Card.Text>{props.ratings3title}</Card.Text>
-            <Card.Text>{props.ratings3percent}</Card.Text>
-            <Card.Text>
-              {props.ratings3count} / {props.ratingsCount}
-            </Card.Text>
-            </div>
         </div>
         </Card.Body>
         <Card.Footer>
-          <small className="text-muted">Last updated 3 mins ago</small>
+          <small className="text-muted"></small>
         </Card.Footer>
       </Card>
       </CardGroup>

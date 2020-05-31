@@ -1,4 +1,5 @@
 .gamecard-container{
-    display:flex
-    
+    display:flex;
+    flex-wrap: wrap;
+
 }
