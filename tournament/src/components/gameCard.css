@@ -9,6 +9,15 @@
     display:flex;
     justify-content: space-between;
 }
+.cardflex {
+    display: flex;
+    justify-content: space-evenly;
+    margin-right: 10px;
+}
+.text-muted {
+    justify-content: center;
+
+}
 /* .rating_center {
     text-align: center;
 }

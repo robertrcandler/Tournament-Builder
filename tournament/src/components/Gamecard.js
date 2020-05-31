@@ -1,51 +1,89 @@
 import React from "react";
-import { Card } from "react-bootstrap";
+import { CardGroup, Card } from "react-bootstrap";
 import "./gameCard.css";
 
 function Gamecard(props) {
   return (
-    <Card style={{ width: "20rem" }}>
-      <Card.Img variant="top" src="https://via.placeholder.com/150" />
-      <Card.Body className="bodywrapper">
-        <Card.Title>{props.title}</Card.Title>
-        <div>
-          <Card.Subtitle className="mb-2 text-muted">rating</Card.Subtitle>
-          <Card.Text className="ratingSize">
-            {props.rating} / {props.ratingTop}
-          </Card.Text>
-        </div>
-    <div className="card_wrapper">
-        <div className="rating_wrapper">
+    <CardGroup className="cardflex" style={{width: "20rem"}}>
+      <Card>
+        <Card.Img variant="top" src={props.backgroundImg} />
+        <Card.Body className="bodywrapper">
+          <Card.Title>{props.name}</Card.Title>
           <div>
+            <Card.Subtitle className="mb-2 text-muted">rating</Card.Subtitle>
+            <Card.Text className="ratingSize">
+              {props.rating} / {props.ratingTop}
+            </Card.Text>
+          </div>
+        <div className="rating_wrapper">
+            <div>
             <Card.Text>{props.ratings1title}</Card.Text>
             <Card.Text>{props.ratings1percent}</Card.Text>
             <Card.Text>
               {props.ratings1count} / {props.ratingsCount}
             </Card.Text>
-          </div>
-          <div>
+            </div>
+            <div>
             <Card.Text>{props.ratings2title}</Card.Text>
             <Card.Text>{props.ratings2percent}</Card.Text>
             <Card.Text>
               {props.ratings2count} / {props.ratingsCount}
             </Card.Text>
-          </div>
-          <div>
-            <Card.Text>{props.ratings3title}</Card.Text>
-            <Card.Text>{props.ratings3percent}</Card.Text>
-            <Card.Text>
-              {props.ratings3count} / {props.ratingsCount}
-            </Card.Text>
-          </div>
+            </div>
         </div>
-    </div>
-      </Card.Body>
-    </Card>
+        </Card.Body>
+        <Card.Footer>
+          <small className="text-muted"></small>
+        </Card.Footer>
+      </Card>
+      </CardGroup>
+
+      
+    
+
+        // <Card style={{ width: "20rem" }}>
+        //   <Card.Img variant="top" src="https://via.placeholder.com/150" />
+        //   <Card.Body className="bodywrapper">
+        //     <Card.Title>{props.title}</Card.Title>
+        //     <div>
+        //       <Card.Subtitle className="mb-2 text-muted">rating</Card.Subtitle>
+        //       <Card.Text className="ratingSize">
+        //         {props.rating} / {props.ratingTop}
+        //       </Card.Text>
+        //     </div>
+
+        //     <div className="rating_wrapper">
+        //       <div>
+
+        //         <Card.Text>{props.ratings1title}</Card.Text>
+        //         <Card.Text>{props.ratings1percent}</Card.Text>
+        //         <Card.Text>
+        //           {props.ratings1count} / {props.ratingsCount}
+        //         </Card.Text>
+        //       </div>
+        //       <div>
+        //         <Card.Text>{props.ratings2title}</Card.Text>
+        //         <Card.Text>{props.ratings2percent}</Card.Text>
+        //         <Card.Text>
+        //           {props.ratings2count} / {props.ratingsCount}
+        //         </Card.Text>
+        //       </div>
+        //       <div>
+        //         <Card.Text>{props.ratings3title}</Card.Text>
+        //         <Card.Text>{props.ratings3percent}</Card.Text>
+        //         <Card.Text>
+        //           {props.ratings3count} / {props.ratingsCount}
+        //         </Card.Text>
+        //       </div>
+        //     </div>
+
+        //   </Card.Body>
+        // </Card>
+    
   );
 }
 
 export default Gamecard;
-
 
 // key={game.id}
 // id={game.id}
