@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import Gamecard from "./components/Gamecard";
+import Gamecard from "../components/Gamecard";
 import "./home.css";
 import axios from "axios";
 
