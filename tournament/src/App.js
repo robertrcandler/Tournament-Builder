@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import  Home  from './Home';
 import  Games  from './Games';
-import login from './login';
+import startlogin from './login/startlogin';
 import { Contact } from './Contact';
 import { NoMatch } from './NoMatch';
 import { Layout } from './components/Layout';
@@ -23,7 +23,7 @@ class App extends Component {
               <Route exact path="/" component={Home} />
               <Route path="/games" component={Games} />
               <Route path="/contact" component={Contact} />
-              <Route path="/Login" component={login} />
+              <Route path="/startlogin" component={startlogin} />
               <Route component={NoMatch} />
             </Switch>
           </Layout>
